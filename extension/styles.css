@@ -1,0 +1,140 @@
+
+.ai-audio-player-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  .ai-audio-player-modal audio {
+    width: 100%;
+    outline: none;
+  }
+  
+
+  /* Sidebar styles */
+#custom-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; /* Default width when expanded */
+    height: 100vh;
+    background-color: #181818;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 9999;
+    transition: width 0.3s ease; /* Smooth transition when collapsing */
+  }
+  
+  /* Collapsed state: only show the favicon */
+  #custom-sidebar.collapsed {
+    width: 60px; /* Width for collapsed state */
+  }
+  
+  /* When the sidebar is collapsed, hide the text (only show the favicon) */
+  #custom-sidebar.collapsed .sidebar-tab {
+    display: none;
+  }
+  
+  #custom-sidebar.collapsed .folder-title {
+    display: none; /* Hide the title when collapsed */
+  }
+  
+  /* Adjust page content when sidebar is present */
+  body {
+    transition: margin-left 0.3s ease; /* Smooth transition when expanding/collapsing */
+  }
+
+  /* Basic sidebar style */
+
+/* Sidebar toggle button style */
+#sidebar-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 20px;
+    
+    
+}
+
+/* Sidebar tab style */
+.folder-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .folder-header .favicon-img {
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+    margin: 5px;
+    padding: 2px;
+  }
+  .folder-header .favicon-img:hover {
+   background-color: gray;
+
+   border-radius: 10px;
+  }
+
+  .folder-header .folder-title {
+    font-weight: bold;
+  }
+
+  .sidebar-tab {
+    display: block;
+    color: white!important;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  .sidebar-tab:hover {
+    background-color: #282828;
+    color: white;
+    text-decoration: none !important;
+    border-radius: 10px;
+  }
+
+  /* Collapsed state: only show the favicon */
+  #custom-sidebar.collapsed {
+    width: 60px;
+  }
+
+  #custom-sidebar.collapsed .folder-header .folder-title {
+    display: none;
+  }
+
+/* Adjust page content when sidebar is present */
+body {
+    margin-left: 250px; /* Adjust based on sidebar width */
+    transition: margin-left 0.3s ease; /* Smooth transition when expanding/collapsing */
+}
+
+/* When the sidebar is collapsed, reduce the margin */
+body.sidebar-collapsed {
+    margin-left: 60px; /* Adjust based on collapsed width */
+}
+
+
+#ai-helper-bar {
+    font-family: Arial, sans-serif;
+  }
+  
+  #ai-helper-bar input {
+    font-size: 16px;
+  }
+  
+  #ai-helper-bar button {
+    font-size: 16px;
+  }
