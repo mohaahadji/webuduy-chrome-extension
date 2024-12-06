@@ -583,7 +583,7 @@ sendButton.addEventListener('click', async () => {
       const action = userQuery.substring('translate the page to '.length).trim(); // Extract language
       await handleTranslation(action); // Pass extracted language
       botResponse = `Translation to ${action} completed.`;
-    } else if (userQuery.toLowerCase().startsWith('fill the form ')) {
+    } else if (userQuery.toLowerCase().startsWith('fill')) {
       const action = userQuery.substring('fill the form about book title '.length).trim(); // Extract language
       await fillFormOnLoad(action); // Pass extracted language
       botResponse = `Form Filled for book title ${action} completed.`;
